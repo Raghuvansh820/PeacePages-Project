@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeacePages</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/static/script.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+  <!-- Screen 1: Welcome -->
+  <div class="screen active" id="welcome-screen">
+    <div class="logo"></div> <!-- Logo container -->
+    <h1>Welcome to your PeacePages</h1>
+    <p>Your personal diary and trusted therapist. Share your thoughts, reflect on your day, and find comfort in a space designed just for you.</p>
+    <button onclick="goToScreen('therapist-screen')">Start Your Journey Now</button>
+  </div>
+
+ <!-- Screen 2: Therapist Chat -->
+<div class="screen" id="therapist-screen">
+  <div class="header">
+    <div class='logo'> </div>
+    <h1>PeacePages</h1>
+  </div>
+  <div class="chatbox" id="chatbox"></div>
+  <div class="chat-controls">
+    <textarea id="user-input" placeholder="Type your message..."></textarea>
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="summarizeConversationAndReset()">Summarize</button>
+  </div>
+  <button onclick="viewDiaryEntries()">View Diary</button>
+</div>
+
+
+  <!-- Screen 3: Diary View -->
+  <div class="screen" id="diary-screen">
+    <div class="header">
+      <div class='logo'> </div>
+        <h1>PeacePages</h1>
+    </div>
+    <div class="diary-entries">
+        <!-- Entries will be dynamically inserted here -->
+    </div>
+    <button class="back-button" onclick="goToScreen('welcome-screen')">Go Back</button>
+</div>
+</body>
+</html>
